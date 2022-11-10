@@ -1,4 +1,4 @@
-# Шаблон для cookiecutter
+# Шаблон для Cookiecutter
 
 Шаблон для автоматической организации структуры проекта c помощью инструмента <a href="https://github.com/cookiecutter/cookiecutter" target="_blank">Cookiecutter</a>.
 
