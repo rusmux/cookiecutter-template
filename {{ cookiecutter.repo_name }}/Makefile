@@ -50,7 +50,7 @@ make_requirements: test_environment
 make_requirements_dev: test_environment
 	poetry export -f requirements.txt -o requirements.dev.txt --only=dev --without-hashes
 
-## Make jupyter requirements.jupyter.txt from pyproject.toml
+## Make Jupyter requirements.jupyter.txt from pyproject.toml
 make_requirements_jupyter: test_environment
 	poetry export -f requirements.txt -o requirements.jupyter.txt --only=jupyter --without-hashes
 
