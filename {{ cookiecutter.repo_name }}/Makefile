@@ -5,11 +5,11 @@ lint make_requirements make_requirements_dev make_requirements_jupyter test_envi
 # GLOBALS                                                                       #
 #################################################################################
 
+PROJECT_NAME = {{ cookiecutter.repo_name }}
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+PYTHON_VERSION = {{ cookiecutter.python_version }}
 BUCKET = {{ cookiecutter.s3_bucket }}
 PROFILE = {{ cookiecutter.aws_profile }}
-PROJECT_NAME = {{ cookiecutter.repo_name }}
-PYTHON_VERSION = {{ cookiecutter.python_version }}
 
 RAW_DATA_DIR = data/raw
 

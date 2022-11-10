@@ -95,3 +95,4 @@ target/
 poetry.lock
 requirements.txt
 requirements.dev.txt
+requirements.jupyter.txt
