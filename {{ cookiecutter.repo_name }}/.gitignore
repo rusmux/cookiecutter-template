@@ -78,6 +78,9 @@ target/
 # exclude data from source control by default
 /data/
 
+# exclude tensorboard runs from source control by default
+*/runs/
+
 # Mac OS-specific storage files
 .DS_Store
 
@@ -87,3 +90,8 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# Dependencies
+poetry.lock
+requirements.txt
+requirements.dev.txt
