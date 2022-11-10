@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_name }}"
+version = "0.1.0"
+description = "{{ cookiecutter.description }}"
+
+license = "{% if cookiecutter.open_source_license == 'MIT' %}MIT{% elif cookiecutter.open_source_license == 'BSD-3-Clause' %}BSD-3{% endif %}"
+
+authors = [
+    "{{ cookiecutter.author_name }}"
+]
+
+readme = "README.md"
+homepage = ""
+
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.10"
+python-dotenv = ">=0.5.1"
+
+[tool.poetry.group.dev.dependencies]
+black = {extras = ["jupyter"]}
+isort
+pylint
+flake8
+mypy
+bandit
+nbqa
+
+[tool.poetry.group.jupyter.dependencies]
+jupyterlab
+jupyter-contrib-nbextensions
+
+[tool.black]
+line-length = 110
+
+[tool.pylint.MASTER]
+max-line-length=110
+disable = [
+   "logging-fstring-interpolation"
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.isort]
+profile = "black"
+line_length = 110
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
