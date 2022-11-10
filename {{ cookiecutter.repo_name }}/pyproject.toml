@@ -2,7 +2,6 @@
 name = "{{ cookiecutter.project_name }}"
 version = "0.1.0"
 description = "{{ cookiecutter.description }}"
-packages = [{ include = "src" }]
 
 license = "{% if cookiecutter.open_source_license == 'MIT' %}MIT{% elif cookiecutter.open_source_license == 'BSD-3-Clause' %}BSD-3{% endif %}"
 
@@ -13,6 +12,7 @@ authors = [
 readme = "README.md"
 homepage = ""
 
+packages = [{ include = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.8, <3.10"
