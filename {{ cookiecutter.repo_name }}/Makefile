@@ -1,5 +1,5 @@
-.PHONY: clean create_environment format install install_dev install_jupyter\
-lint make_requirements make_requirements_dev make_requirements_jupyter test_environment
+.PHONY: clean create_environment format install install_dev\
+lint make_requirements make_requirements_dev test_environment
 
 #################################################################################
 # GLOBALS                                                                       #
