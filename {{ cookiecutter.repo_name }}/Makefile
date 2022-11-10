@@ -37,11 +37,6 @@ install: test_environment
 install_dev: make_requirements_dev
 	pip install -r requirements.dev.txt
 
-## Install Jupyter dependencies
-install_jupyter: make_requirements_jupyter
-	pip install -r requirements.jupyter.txt
-	jupyter contrib nbextension install --user
-
 ## Make requirements.txt from pyproject.toml
 make_requirements: test_environment
 	poetry export -f requirements.txt -o requirements.txt --without-hashes
@@ -49,10 +44,6 @@ make_requirements: test_environment
 ## Make development requirements.dev.txt from pyproject.toml
 make_requirements_dev: test_environment
 	poetry export -f requirements.txt -o requirements.dev.txt --only=dev --without-hashes
-
-## Make Jupyter requirements.jupyter.txt from pyproject.toml
-make_requirements_jupyter: test_environment
-	poetry export -f requirements.txt -o requirements.jupyter.txt --only=jupyter --without-hashes
 
 ## Delete all unwanted files
 clean:
@@ -63,16 +54,16 @@ clean:
 
 ## Format
 format:
-	black .
-	isort .
-	nbqa black .
-	nbqa isort .
+	- black .
+	- isort .
+	- nbqa black .
+	- nbqa isort .
 
 ## Lint
 lint:
-	pylint --exit-zero src
-	flake8 --exit-zero .
-	mypy .
+	- pylint --exit-zero src
+	- flake8 --exit-zero .
+	- mypy .
 
 ## Set up Python interpreter environment
 create_environment:
