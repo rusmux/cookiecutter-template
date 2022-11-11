@@ -32,6 +32,7 @@ endif
 ## Install Python dependencies
 install: test_environment
 	pip install .
+	- jupyter contrib nbextension install --user
 
 ## Install Python development dependencies
 install_dev: make_requirements_dev
