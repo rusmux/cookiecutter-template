@@ -1,7 +1,14 @@
+"""Script for testing Python environment."""
+
 import sys
 
 
 def main() -> None:
+    """Test Python environment is set up correctly.
+
+    Raises:
+        TypeError: If Python version is lower than 3.8
+    """
     system_major = sys.version_info.major
     system_minor = sys.version_info.minor
 

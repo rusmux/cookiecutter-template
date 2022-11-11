@@ -17,6 +17,24 @@ packages = [{ include = "src" }]
 [tool.poetry.dependencies]
 python = ">=3.8, <3.10"
 
+
+[tool.black]
+line-length = 110
+
+[tool.pylint.MASTER]
+max-line-length=110
+disable = [
+    "unspecified-encoding"
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.isort]
+profile = "black"
+line_length = 110
+
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

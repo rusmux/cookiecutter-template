@@ -83,7 +83,7 @@ else
 	endif
 endif
 
-## Test Python environment is setup correctly
+## Test Python environment is set up correctly
 test_environment:
 	python test_environment.py
 
