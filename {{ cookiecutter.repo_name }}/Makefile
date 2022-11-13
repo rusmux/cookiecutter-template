@@ -64,7 +64,7 @@ format:
 lint:
 	- pylint --exit-zero src
 	- flake8 --exit-zero .
-	- mypy .
+	- dmypy run --timeout 1800 .
 
 ## Set up Python interpreter environment
 create_environment:
