@@ -88,11 +88,7 @@ target/
 *.swp
 *.swo
 
-# Mypy cache
+# Mypy
 .mypy_cache/
+.dmypy.json
 
-# Dependencies
-poetry.lock
-requirements.txt
-requirements.dev.txt
-requirements.jupyter.txt
